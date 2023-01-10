@@ -2,7 +2,8 @@
 # YOURLS Telegram Notifier [![Listed in Awesome YOURLS!](https://img.shields.io/badge/Awesome-YOURLS-C5A3BE)](https://github.com/YOURLS/awesome-yourls/)
 
 <!-- Once you have committed code, get your plugin listed in Awesome YOURLS ! See https://github.com/YOURLS/awesome-yourls -->
-This plugin allows you to to send a telegram message to one ore multiple Telegram accounts or channel with a bot you can create in the Telegram App whenever a new shortlink is created. 
+This plugin allows you to to send a Telegram message whenever a new shortlink is created.
+You can customize the message and send the same message to multiple Telegram accounts or channels.
 
 Requires [](https://yourls.org) `1.9.1` and above (lower is untested).
 
