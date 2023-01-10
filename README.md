@@ -4,7 +4,7 @@
 <!-- Once you have committed code, get your plugin listed in Awesome YOURLS ! See https://github.com/YOURLS/awesome-yourls -->
 This plugin allows you to to send a telegram message to one ore multiple Telegram accounts or channel with a bot you can create in the Telegram App whenever a new shortlink is created. 
 
-Requires [YOURLS](https://yourls.org) `1.9.1` and above.
+Requires [YOURLS](https://yourls.org) `1.9.1` and above (lower is untested).
 
 ## Usage
 | Admin Page :camera: | Example Telegram Notifications :camera:|
