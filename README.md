@@ -21,7 +21,7 @@ Requires [](https://yourls.org) `1.9.1` and above (lower is untested).
 ## Installation
 
 1. In `/user/plugins`, create a new folder named `telegram-notifier`.
-2. Drop these files in that directory.
+2. Get the latest release from Github and extract the files contained in that directory.
 3. Go to the Plugins administration page (eg. `http://sho.rt/admin/plugins.php`) and activate the plugin.
 4. Message `@botfather` on Telegram and create a new bot following the instructions. Insert the obtained bot token in plugin settings page.
 5. Your bot can message to individual users and channels (if it has the rights). To send a notification to yourself, obtain your Telegram user ID by messaging `@myidbot` and paste it in the "Telegram User ID(s)" field. 
