@@ -20,8 +20,6 @@ Requires [YOURLS](https://yourls.org) `1.9.1` and above.
 
 ## Installation
 
-:bulb: This is a great place for showing how to install the package. The common way is as below:
-
 1. In `/user/plugins`, create a new folder named `telegram-notifier`.
 2. Drop these files in that directory.
 3. Go to the Plugins administration page (eg. `http://sho.rt/admin/plugins.php`) and activate the plugin.
