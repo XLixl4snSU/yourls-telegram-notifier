@@ -1,23 +1,15 @@
 <?php
+
 // No direct call.
 if( !defined( 'YOURLS_UNINSTALL_PLUGIN' ) ) die();
 
-/**
- * This is an optional file that will be executed when a user deactivates your plugin.
- *
- * Example of an uninstall procedure :
- *
- * - delete custom option :
- *      yourls_delete_option('joe_plugin');
- *
- * - delete custom table :
- *      $table  = 'JOE_CUSTOM_TABLE';
- *      $sql    = "DROP TABLE IF EXISTS :table";
- *      $binds  = array('table' => $table);
- *      $update = yourls_get_db()->fetchAffected($sql, $binds);
- *
- * - delete specific files,
- * - ping plugin's mothership to tell about uninstalling,
- * - etc.
- *
- */
+// Check if settings should be deleted on deactivation, delete if true
+
+$delete_settings = yourls_get_option( 'telegram_notifier_delete_settings_on_uninstall' );
+
+if ( $delete_settings == "true" ) {
+	yourls_delete_option( 'telegram_notifier_api_key' );
+	yourls_delete_option( 'telegram_notifier_user_id' );
+	yourls_delete_option( 'telegram_notifier_user_notification_text' );
+	yourls_delete_option( 'telegram_notifier_delete_settings_on_uninstall' );
+}
