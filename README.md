@@ -5,7 +5,7 @@
 This plugin allows you to to send a Telegram message whenever a new shortlink is created.
 You can customize the message and send the same message to multiple Telegram accounts or channels.
 
-Requires [](https://yourls.org) `1.9.1` and above (lower is untested).
+Requires [YOURLS](https://yourls.org) `1.9.1` and above (lower is untested).
 
 ## Usage
 | Admin Page :camera: | Example Telegram Notifications :camera:|
