@@ -51,10 +51,11 @@ function telegram_notifier_display_page() {
 		<input type="hidden" name="nonce" value="$nonce" />
 		<p><label for="telegram_notifier_api_key">Telegram Bot Token</label> <input type="text" id="telegram_notifier_api_key" name="telegram_notifier_api_key" value="$telegram_notifier_api_key" size="70" /></p>
 		<p><label for="telegram_notifier_user_id">Telegram User ID(s) (separated by comma)</label> <input type="text" id="telegram_notifier_user_id" name="telegram_notifier_user_id" value="$telegram_notifier_user_id" size="70" /></p>
-		<p><label for="telegram_notifier_user_notification_text">Notification text (use %url, %shortlink and %ip as variables)</label> <input type="text" id="telegram_notifier_user_notification_text" name="telegram_notifier_user_notification_text" value="$telegram_notifier_user_notification_text" size="70" /></p>
-		
+		<p><label for="telegram_notifier_user_notification_text">Notification text (use %url, %shortlink and %ip as variables)</label><br>
+		<textarea id="telegram_notifier_user_notification_text" name="telegram_notifier_user_notification_text" cols="60" rows="5" size="70" />$telegram_notifier_user_notification_text</textarea></p>
 		<input type='hidden' id="telegram_notifier_delete_settings_on_uninstall" name="telegram_notifier_delete_settings_on_uninstall" value='false' >
-		<p><label for="telegram_notifier_delete_settings_on_uninstall">Check to delete all stored settings on uninstall/deactivation. </label> <input type="checkbox" id="telegram_notifier_delete_settings_on_uninstall" name="telegram_notifier_delete_settings_on_uninstall" value="true" $checkbox><br> 
+		<p><label for="telegram_notifier_delete_settings_on_uninstall">Check to delete all stored settings on uninstall/deactivation. </label>
+		<input type="checkbox" id="telegram_notifier_delete_settings_on_uninstall" name="telegram_notifier_delete_settings_on_uninstall" value="true" $checkbox><br> 
 		<p><input type="submit" value="Update settings" /></p>
 		</form>
 		
@@ -73,5 +74,3 @@ function telegram_notifier_update_options($option) {
 
 	}
 }
-
-

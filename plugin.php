@@ -3,7 +3,7 @@
 Plugin Name: Telegram Notifier
 Plugin URI: https://github.com/XLixl4snSU/yourls-telegram-notifier
 Description: This plugin provides Telegram notifications for newly created shortlinks
-Version: 1.0
+Version: 1.0.1
 Author: XLixl4snSU
 Author URI: https://github.com/XLixl4snSU
 */
