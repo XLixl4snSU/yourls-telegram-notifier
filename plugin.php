@@ -3,7 +3,7 @@
 Plugin Name: Telegram Notifier
 Plugin URI: https://github.com/XLixl4snSU/yourls-telegram-notifier
 Description: This plugin provides Telegram notifications for newly created shortlinks
-Version: 1.0.1
+Version: 1.0.2
 Author: XLixl4snSU
 Author URI: https://github.com/XLixl4snSU
 */
@@ -44,9 +44,22 @@ function telegram_notifier_api_request( $message ) {
 	$user_id = yourls_get_option( 'telegram_notifier_user_id' );
 	$user_id_array = explode(",", str_replace(' ', '', $user_id));
 	foreach ( $user_id_array as $current_id ) {
+		// Check if the ID contains a thread ID (format: chat_id/message_thread_id)
+		$chat_id = $current_id;
+		$message_thread_id = null;
+		if ( strpos( $current_id, '/' ) !== false ) {
+			list( $chat_id, $message_thread_id ) = explode( '/', $current_id, 2 );
+		}
 		// Build HTTP Telegram API request
 		$telegram_api_url = "https://api.telegram.org/bot$api_key/sendMessage";
-		$request_data = array('chat_id' => $current_id, 'text' => $message);
+		$request_data = array(
+			'chat_id' => $chat_id,
+			'text' => $message
+		);
+		// Add message_thread_id if it exists
+		if ( !empty( $message_thread_id ) ) {
+			$request_data['message_thread_id'] = $message_thread_id;
+		}
 		$options = array(
 		'http' => array(
 			'header'  => "Content-type: application/x-www-form-urlencoded",
